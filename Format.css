@@ -1,0 +1,9 @@
+li{
+  display: inline;
+}
+
+a{
+  display: block;
+  width:100px;
+  background-color: #AEEEE;
+}

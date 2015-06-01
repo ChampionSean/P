@@ -1,0 +1,118 @@
+<DOCTYPE html5>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <title>PoloCase</title>
+    <div id="regis">
+    <img src="PoloCase.jpg" style="width:895x;height:130px">
+  </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="format.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script>
+  window.onload = function () {
+
+document.formularioContacto.nombre.focus();
+
+document.formularioContacto.addEventListener('submit', validarFormulario);
+
+}
+
+
+
+function validarFormulario(evObject) {
+
+evObject.preventDefault();
+
+var todoCorrecto = true;
+
+var formulario = document.formularioContacto;
+
+for (var i=0; i<formulario.length; i++) {
+
+               if(formulario[i].name != 'rfc') {
+
+                              if (formulario[i].value == null || formulario[i].value.length == 0 || /^\s*$/.test(formulario[i].value)){
+
+                              alert ('No puedes tener campos vacíos solo el RFC es opcional');
+
+                              todoCorrecto=false;
+
+                              }
+
+               }
+
+               }
+
+if (todoCorrecto ==true) {formulario.submit();}
+
+}
+  </script>
+  </head>
+    <body>
+
+<div id="mmm">
+      <div class="vision">
+        <div class="formulario">
+          <h2>Registro</h2>
+<form name="formularioContacto" action="Controller.php" method="POST">
+  <br>
+  <br>
+  <label for="group1">¿Quién eres?:</label>
+  <input type="radio" name="group1" value="empresa"checked> Empresa o Grupo
+  <input type="radio" name="group1" value="persona"> Persona
+  <br>
+  <br>
+  <br>
+  <div class="form-group">
+  <label for="nombre">Nombre(persona o empresa):</label>
+  <input type="text" name="nombre"  placeholder="Escribir nombre" maxlength="30">
+</div>
+  <br>
+  <br>
+  <br>
+  <div class="form-group">
+  <label for="mail">E-mail:</label>
+  <input type="email" name="mail"  placeholder="Escribir email" maxlength="30">
+</div>
+  <br>
+  <br>
+  <br>
+  <label for="group2">Teléfono (solo números sin guiones):</label>
+  <input type="radio" name="group2" value="casa" checked> Casa
+  <input type="radio" name="group2" value="celular"> Celular
+  <br>
+  <div class="form-group">
+  <input type="tel" name="telefo" placeholder="teléfono o celular" maxlength="10">
+</div>
+  <br>
+  <br>
+  <br>
+  <div class="form-group">
+  <label for="dire">Dirección:</label>
+  <input type="text" name="dire"  placeholder="Escribir dirección">
+</div>
+  <br>
+  <br>
+  <br>
+  <div class="form-group">
+  <label for="rfc">RFC(si se requiere factura):</label>
+  <input type="text" name="rfc"  placeholder="RFC">
+</div>
+  <br>
+  <br>
+  <br>
+  <input type="submit" value="Registrarse" class="submit">
+</form>
+</div>
+</div>
+</div>
+    <footer>
+      <p>Desarrollado por Marco Antonio Estrada Robles</p>
+      <p>Todos los derechos reservados</p>
+    </footer>
+
+  </body>
+      </html>

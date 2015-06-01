@@ -1,0 +1,81 @@
+<DOCTYPE html5>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="format.css">
+    <title>PoloCase</title>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter=new google.maps.LatLng(19.419834,-99.062316);
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:15,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+    <div id="regis">
+    <img src="PoloCase.jpg" style="width:895x;height:130px">
+  </div>
+
+<div id="bar">
+    <ul>
+      <li><a href="Index.html">Home</a></li>
+      <li><a href="Vision.html">¿Quiénes somos?</a></li>
+      <li><a href="Catalogo.html">Catálogo</a></li>
+      <li><a href="Form.html">Registro de clientes</a></li>
+    </ul>
+  </div>
+
+  </head>
+
+  <body>
+
+<div class="izqui">
+    <div class="vision">
+    <h1>¿Quiénes somos?</h1>
+<p>Estuches  <i>POLOCASE</i> nos esforzamos constantemente por ser una empresa con mas de 20 años de experiencia en el mercado de RACKS, ESTUCHES, CASES y CAJAS, estamos comprometidos en ofrecer lo mejor a nuestros clientes, INNOVAR, TRANSFORMAR y CREAR PRODUCTOS de la mas alta calidad y variedad.</p>
+<p><i>POLOCASE</i> garantiza la calidad de sus productos ya que estan fabricados con herrajes importados altamente capacitados en diseño y manufactura.</p>
+<p>Servcio que te ofrece <i>POLOCASE</i>:</p>
+<br>
+<ul>
+  <li>Diseños Personalizados</li>
+  <li>Material de Importación</li>
+  <li>Calidad</li>
+  <li>Puntualidad</li>
+</ul>
+<br>
+<b>
+<h3>No dejes que se maltrate tu equipo de audio, video, iluminación, computo, etc...</h3>
+<h3>Protégelo con <i>POLOCASE!</i></h3>
+</b>
+<br>
+<p>Av.Prosperidad No.147 Int.1, Col.Pantitlán, C.P.08100 México, D.F., Deleg.Iztacalco</p>
+<p>Tels.: 5115-6497 / Nextel: 1988-9776 ID:62*14*52862</p>
+<p>email: r51156497@prodigy.net.mx</p>
+</div>
+</div>
+
+<div id="googleMap" style="width:550px;height:530px;">
+</div>
+
+  <footer>
+    <p>Desarrollado por Marco Antonio Estrada Robles</p>
+    <p>Todos los derechos reservados</p>
+  </footer>
+</body>
+    </html>
